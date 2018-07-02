@@ -1,0 +1,20 @@
+<view class="container">
+    <view class="content">
+      <view><text style="font-size:40rpx;">{{post.title}}</text></view>
+      <view><text style='font-size:28rpx;margin: 20rpx 0;'>{{post.member.username}}</text></view>
+      <view><text style='font-size:34rpx'>{{post.content}}</text></view>
+      <view style='font-size: 28rpx;' class="tips">
+        <text>{{post.replies}}条回复</text>
+        <text>{{post.node.title}}</text>
+      </view>
+    </view>
+
+    <view class='comment-box'>
+      <view wx:for="{{comment}}">
+        <view class="comment">
+          <view><text>{{item.content}}</text></view>
+          <view><text>{{item.member.username}}</text></view>
+        </view>
+      </view>
+    </view>
+</view>

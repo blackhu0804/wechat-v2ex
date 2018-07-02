@@ -1,0 +1,53 @@
+<view class='container'>
+  <view class='user-info'>
+    <image src='//cdn.v2ex.com/avatar/6766/2b3d/67060_large.png?m=1408121347'></image>
+    <text>
+      用户名
+    </text>
+  </view>
+
+  <view class="item">
+    <image src="//cdn.v2ex.com/avatar/6766/2b3d/67060_large.png?m=1408121347" />
+    <view class="info">
+      <view>
+        <text class='title'>这是标题</text>
+      </view>
+      <view class="user">
+        <text class="category">
+          节点
+        </text>
+        <text>
+          用户名
+        </text>
+        <text>
+          时间
+        </text>
+      </view>
+    </view>
+    <view class='replies'>
+      120
+    </view>
+  </view>
+  <view class="item">
+    <image src="//cdn.v2ex.com/avatar/6766/2b3d/67060_large.png?m=1408121347" />
+    <view class="info">
+      <view>
+        <text class='title'>这是标题</text>
+      </view>
+      <view class="user">
+        <text class="category">
+          节点
+        </text>
+        <text>
+          用户名
+        </text>
+        <text>
+          时间
+        </text>
+      </view>
+    </view>
+    <view class='replies'>
+      120
+    </view>
+  </view>
+</view>

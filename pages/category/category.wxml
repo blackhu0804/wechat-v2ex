@@ -1,0 +1,25 @@
+<view class='container'>
+  <text class='list-title'>节点列表</text>
+  <view class='category-list'>
+    <view class='item'>
+      <image src='https://www.v2ex.com/static/img/v2ex@2x.png'></image>
+      <text>节点名称</text>
+    </view>
+    <view class='item'>
+      <image src='https://www.v2ex.com/static/img/v2ex@2x.png'></image>
+      <text>节点名称</text>
+    </view>
+    <view class='item'>
+      <image src='https://www.v2ex.com/static/img/v2ex@2x.png'></image>
+      <text>节点名称</text>
+    </view>
+    <view class='item'>
+      <image src='https://www.v2ex.com/static/img/v2ex@2x.png'></image>
+      <text>节点名称</text>
+    </view>
+    <view class='item'>
+      <image src='https://www.v2ex.com/static/img/v2ex@2x.png'></image>
+      <text>节点名称</text>
+    </view>
+  </view>
+</view>

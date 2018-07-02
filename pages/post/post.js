@@ -4,31 +4,43 @@ Page({
    * 页面的初始数据
    */
   data: {
-    list: []
+    post: [],
+    comment: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    // console.log(options.id)
+    let id = options.id
     let that = this
     wx.request({
-      url: 'https://www.v2ex.com/api/topics/latest.json',
+      url: 'https://www.v2ex.com/api/topics/show.json?id=' + id,
+      method: 'get',
+      success: function(res) {
+        // console.log(res)
+        that.setData({
+          post: res.data[0]
+        })
+      },
+      fail: function() {
+
+      },
+      complete: function() {
+
+      }
+    })
+
+    wx.request({
+      url: 'https://www.v2ex.com/api/replies/show.json?topic_id=' + id,
       method: 'get',
       success: function(res) {
         that.setData({
-          list: res.data
+          comment: res.data
         })
       }
     })
-    console.log(that.list)
-  },
-
-  onTouch: function(event) {
-    wx.navigateTo({
-      url: '/pages/post/post?id=' + event.currentTarget.id,
-    })  
-    console.log(event.currentTarget.id)
   },
 
   /**

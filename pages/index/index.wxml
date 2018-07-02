@@ -1,13 +1,29 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+  <view wx:for="{{list}}">
+    <view class="item" catchtap='onTouch' id="{{item.id}}">
+      <view class='ava'>
+        <image src="{{item.member.avatar_mini}}" mode='scaleToFill'/>
+      </view>
+      <view class="info">
+        <view>
+          <text class='title'>{{item.title}}</text>
+        </view>
+        <view class="user">
+          <text class="category">
+            节点
+          </text>
+          <text>
+            用户名
+          </text>
+          <text>
+            时间
+          </text>
+        </view>
+      </view>
+      <view class='replies'>
+        120
+      </view>
+    </view>
   </view>
 </view>

@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 15rpx;
+}
+.content {
+    background-color: #eee;
+    padding:10rpx;
+    border-radius: 10rpx;
+}
+.content .tips {
+    display: flex;
+    justify-content: space-between;
+}
+.comment {
+    margin-top: 20rpx;
+}

@@ -1,6 +1,9 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/post/post",
+    "pages/category/category",  
+    "pages/mine/mine",    
     "pages/logs/logs"
   ],
   "window":{
@@ -20,13 +23,13 @@
         "selectedIconPath": "images/tabBar/invitation_on.png"
       },
       {
-        "pagePath":"pages/logs/logs",
+        "pagePath":"pages/index/index",
         "text": "热门",
         "iconPath": "images/tabBar/hot.png",
         "selectedIconPath": "images/tabBar/hot_on.png"
       },
       {
-        "pagePath": "pages/logs/logs",
+        "pagePath": "pages/category/category",
         "text": "节点",
         "iconPath": "images/tabBar/category.png",
         "selectedIconPath": "images/tabBar/category_on.png"
