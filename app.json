@@ -1,0 +1,36 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "borderStyle": "white",
+    "selectedColor": "#1296db",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/tabBar/invitation.png",
+        "selectedIconPath": "images/tabBar/invitation_on.png"
+      },
+      {
+        "pagePath":"pages/logs/logs",
+        "text": "热门",
+        "iconPath": "images/tabBar/hot.png",
+        "selectedIconPath": "images/tabBar/hot_on.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "节点",
+        "iconPath": "images/tabBar/category.png",
+        "selectedIconPath": "images/tabBar/category_on.png"
+      }
+    ]
+  }
+}
