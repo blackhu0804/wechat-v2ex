@@ -3,7 +3,7 @@
   <view wx:for="{{list}}">
     <view class="item" catchtap='onTouch' id="{{item.id}}">
       <view class='ava'>
-        <image src="{{item.member.avatar_mini}}" mode='scaleToFill'/>
+        <image src="{{item.member.avatar_normal}}"/>
       </view>
       <view class="info">
         <view>
@@ -11,19 +11,22 @@
         </view>
         <view class="user">
           <text class="category">
-            节点
+            {{item.node.title}}
           </text>
           <text>
-            用户名
+            {{item.member.username}}
           </text>
           <text>
-            时间
+            {{item.last_touched}}
           </text>
         </view>
       </view>
       <view class='replies'>
-        120
+        {{item.replies}}
       </view>
     </view>
   </view>
+  <loading hidden="{{hidden}}">
+    加载中...
+  </loading>
 </view>

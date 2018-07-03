@@ -1,19 +1,40 @@
 <view class="container">
     <view class="content">
-      <view><text style="font-size:40rpx;">{{post.title}}</text></view>
-      <view><text style='font-size:28rpx;margin: 20rpx 0;'>{{post.member.username}}</text></view>
-      <view><text style='font-size:34rpx'>{{post.content}}</text></view>
-      <view style='font-size: 28rpx;' class="tips">
-        <text>{{post.replies}}条回复</text>
-        <text>{{post.node.title}}</text>
+      <view class='content-header'>
+        <view>
+          <view><text style="font-size:36rpx;">{{post.title}}</text></view>
+          <view>
+            <text style='font-size:28rpx;margin: 20rpx 0;'>{{post.member.username}}</text>
+            <text style='font-size: 28rpx;margin-left:20rpx;color:#666;'>{{post.last_modified}}</text>
+          </view>
+        </view>
+        <view>
+          <image src="{{post.member.avatar_normal}}"></image>
+        </view>
+      </view>
+      <view class='post-content'><text style='font-size:34rpx'>{{post.content}}</text></view>
+      <view class="tips">
+        <text class='replies'>{{post.replies}}条回复</text>
+        <text class='node'>{{post.node.title}}</text>
       </view>
     </view>
 
     <view class='comment-box'>
       <view wx:for="{{comment}}">
         <view class="comment">
-          <view><text>{{item.content}}</text></view>
-          <view><text>{{item.member.username}}</text></view>
+          <view class='logo'>
+            <image src="{{item.member.avatar_normal}}"></image>
+          </view>
+          <view class='comment-content'>
+            <view style='margin-bottom: 20rpx;'>
+              <text>{{item.member.username}}</text>
+              <text class='create-time'>{{item.created}}</text>
+            </view>          
+            <view><text>{{item.content}}</text></view>
+          </view>
+          <view class='index'>
+            <text>{{index+1}}楼</text>
+          </view>
         </view>
       </view>
     </view>

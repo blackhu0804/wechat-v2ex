@@ -4,6 +4,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    hidden: false,
     list: []
   },
 
@@ -12,13 +13,29 @@ Page({
    */
   onLoad: function (options) {
     let that = this
+    function format(time) {
+      let date = new Date(time * 1000);
+      let Y = date.getFullYear() + '-';
+      let M = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-';
+      let D = (date.getDate() < 10 ? '0' + date.getDate() : date.getDate()) + ' ';
+      let h = (date.getHours() < 10 ? '0' + date.getHours() : date.getHours()) + ':';
+      let m = (date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes()) + ':';
+      let s = (date.getSeconds() < 10 ? '0' + date.getSeconds() : date.getSeconds());
+      return M + D + h + m + s;
+    }
     wx.request({
       url: 'https://www.v2ex.com/api/topics/latest.json',
       method: 'get',
       success: function(res) {
+        res.data.forEach(item => {
+          item.last_touched = format(item.last_touched)
+        })
         that.setData({
           list: res.data
         })
+        setTimeout(() => {
+          that.setData({ hidden: true });
+        }, 300)
       }
     })
     console.log(that.list)

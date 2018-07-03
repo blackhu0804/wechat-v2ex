@@ -4,14 +4,56 @@
     padding: 15rpx;
 }
 .content {
-    background-color: #eee;
+    background-color: #eff;
     padding:10rpx;
     border-radius: 10rpx;
 }
+.content-header {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20rpx;
+  border-bottom: 1px solid #eee;
+}
+.content-header image {
+  width: 90rpx;
+  height: 90rpx;
+}
+.post-content {
+  padding-top: 20rpx;
+}
 .content .tips {
-    display: flex;
-    justify-content: space-between;
+  font-size: 28rpx;
+  padding-top: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .comment {
-    margin-top: 20rpx;
+  padding: 20rpx 0;
+  margin-top: 20rpx;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  font-size: 30rpx;
+}
+.index {
+  margin-left: 20rpx;
+  color: #aaa;
+}
+.comment-content {
+  flex: 1;
+}
+.comment image {
+  width: 90rpx;
+  height: 90rpx;
+  flex-basis: 90rpx;
+  margin-right: 20rpx;  
+}
+.create-time {
+  padding-left: 20rpx;
+  color: #aaa;
+}
+.node {
+  padding: 20rpx;
+  background-color: #eee;
+  border-radius: 10rpx;
 }

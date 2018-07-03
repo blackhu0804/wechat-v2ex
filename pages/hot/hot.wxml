@@ -1,0 +1,31 @@
+<view class="container">
+  <view wx:for="{{list}}">
+    <view class="item" catchtap='onTouch' id="{{item.id}}">
+      <view class='ava'>
+        <image src="{{item.member.avatar_normal}}"/>
+      </view>
+      <view class="info">
+        <view>
+          <text class='title'>{{item.title}}</text>
+        </view>
+        <view class="user">
+          <text class="category">
+            {{item.node.title}}
+          </text>
+          <text>
+            {{item.member.username}}
+          </text>
+          <text>
+            {{item.last_touched}}
+          </text>
+        </view>
+      </view>
+      <view class='replies'>
+        {{item.replies}}
+      </view>
+    </view>
+  </view>
+  <loading hidden="{{hidden}}">
+    加载中...
+  </loading>
+</view>
