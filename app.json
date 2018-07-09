@@ -18,7 +18,7 @@
     "borderStyle": "white",
     "selectedColor": "#1296db",
     "list": [
-      {
+      { 
         "pagePath": "pages/index/index",
         "text": "最新",
         "iconPath": "images/tabBar/invitation.png",

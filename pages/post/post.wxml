@@ -12,7 +12,7 @@
           <image src="{{post.member.avatar_normal}}"></image>
         </view>
       </view>
-      <view class='post-content'><text style='font-size:34rpx'>{{post.content}}</text></view>
+      <view class='post-content'>{{post.content}}</view>
       <view class="tips">
         <text class='replies'>{{post.replies}}条回复</text>
         <text class='node'>{{post.node.title}}</text>
@@ -30,7 +30,7 @@
               <text>{{item.member.username}}</text>
               <text class='create-time'>{{item.created}}</text>
             </view>          
-            <view><text>{{item.content}}</text></view>
+            <view><text style='font-size="30rpx"'>{{item.content}}</text></view>
           </view>
           <view class='index'>
             <text>{{index+1}}楼</text>
