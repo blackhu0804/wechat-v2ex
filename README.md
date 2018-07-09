@@ -4,3 +4,5 @@
 
 ---
 
+![GitHub](https://github.com/hu970804/wechat-v2ex/blob/master/images/gif.gif)
+![GitHub](https://github.com/hu970804/wechat-v2ex/blob/master/images/gif2.gif)
